@@ -304,6 +304,52 @@
     font-family: var(--font-mono);
 }
 
+/* ---------- Divider ---------- */
+.login-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 4px 0;
+}
+.login-divider::before,
+.login-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+.login-divider span {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ---------- Demo Login Button ---------- */
+.login-demo-btn {
+    width: 100%;
+    padding: 11px 16px;
+    background: var(--bg-surface);
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.login-demo-btn:hover {
+    background: var(--accent-muted);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+.login-demo-btn img { opacity: 0.7; }
+.login-demo-btn:hover img { opacity: 1; }
+
 /* ---------- Right Side: Branding ---------- */
 .login-modal-right {
     background: linear-gradient(135deg, #EF4444 0%, #F97316 50%, #FBBF24 100%);

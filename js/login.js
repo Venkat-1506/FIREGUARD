@@ -14,6 +14,7 @@
     var loginErrorText = document.getElementById("login-error-text");
     var loginBtn = document.getElementById("login-btn");
     var passwordToggle = document.getElementById("password-toggle");
+    var demoLoginBtn = document.getElementById("demo-login-btn");
 
     if (!loginForm) return;
 
@@ -108,6 +109,17 @@
 
     var remembered = localStorage.getItem("fireguard_remember");
     if (remembered && usernameInput) { usernameInput.value = remembered; var rm = document.getElementById("remember-me"); if (rm) rm.checked = true; }
+
+    if (demoLoginBtn) {
+        demoLoginBtn.addEventListener("click", function () {
+            demoLoginBtn.disabled = true;
+            demoLoginBtn.textContent = "Logging in...";
+            sessionStorage.setItem("fireguard_user", JSON.stringify({
+                username: "admin", name: "Safety Officer", loginTime: new Date().toISOString()
+            }));
+            window.location.href = "dashboard.html";
+        });
+    }
 
     var s = document.createElement("style");
     s.textContent = "@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}";
