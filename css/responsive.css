@@ -58,13 +58,50 @@
         z-index: 200;
     }
 
+    /* Mobile filter: top row = search + toggle + view toggle */
     .filter-bar-inner {
-        flex-direction: column;
-        align-items: stretch;
+        flex-wrap: nowrap;
+        gap: 8px;
+    }
+    .filter-search {
+        min-width: 0;
+        flex: 1;
+    }
+    .filter-toggle-btn {
+        display: flex;
     }
     .filter-divider { display: none; }
-    .filter-select { min-width: 100%; }
-    .view-toggle { align-self: flex-start; }
+
+    /* Mobile filter: panel is a collapsible dropdown */
+    .filter-panel {
+        display: none;
+        padding-top: 12px;
+        margin-top: 12px;
+        border-top: 1px solid var(--border);
+    }
+    .filter-panel.open {
+        display: block;
+    }
+    .filter-panel-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .filter-panel-grid .filter-select {
+        min-width: 0;
+        width: 100%;
+    }
+    .filter-panel-grid .filter-clear {
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border: 1px dashed var(--border-strong);
+        border-radius: var(--radius);
+        font-size: 13px;
+        font-weight: 500;
+    }
 
     .page-header-inner {
         flex-direction: column;
@@ -121,7 +158,7 @@
     .eq-card-img { height: 120px; }
 
     .filter-bar { padding: 10px 12px; }
-    .filter-search { min-width: 100%; }
+    .filter-bar-inner { gap: 6px; }
 
     .page-header-left h1 { font-size: 18px; }
 
@@ -163,4 +200,9 @@
 
     .form-card { padding: 20px 16px; }
     .form-grid { grid-template-columns: 1fr; }
+
+    /* Very small screens: single column filters */
+    .filter-panel-grid {
+        grid-template-columns: 1fr;
+    }
 }

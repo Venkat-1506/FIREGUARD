@@ -452,6 +452,56 @@
 }
 .filter-clear:hover { background: var(--accent-muted); }
 
+/* ---------- Mobile Filter Toggle ---------- */
+.filter-toggle-btn {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 14px;
+    background: var(--bg-input);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition);
+    white-space: nowrap;
+}
+.filter-toggle-btn img { width: 16px; height: 16px; opacity: 0.6; }
+.filter-toggle-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-muted);
+}
+.filter-toggle-btn.active {
+    background: var(--accent-muted);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+.filter-toggle-badge {
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: var(--radius-full);
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.filter-panel {
+    display: contents;
+}
+
+.filter-top-row {
+    display: none;
+}
+
 /* ---------- Equipment Card Grid ---------- */
 .eq-grid {
     display: grid;

@@ -23,6 +23,9 @@
     var paginationNext = document.getElementById('pagination-next');
     var paginationNums = document.getElementById('pagination-numbers');
     var equipmentCount = document.getElementById('equipment-count');
+    var filterToggle = document.getElementById('filter-toggle');
+    var filterPanel = document.getElementById('filter-panel');
+    var filterCount = document.getElementById('filter-count');
 
     var allEquipment = [];
     var filteredEquipment = [];
@@ -121,6 +124,28 @@
     function updateClearBtn() {
         var has = searchInput.value || filterType.value || filterStatus.value || filterBuilding.value || filterFloor.value;
         clearFiltersBtn.style.display = has ? 'inline-flex' : 'none';
+        updateFilterCount();
+    }
+
+    function updateFilterCount() {
+        var count = 0;
+        if (filterType.value) count++;
+        if (filterStatus.value) count++;
+        if (filterBuilding.value) count++;
+        if (filterFloor.value) count++;
+        if (count > 0) {
+            filterCount.textContent = count;
+            filterCount.style.display = 'flex';
+            filterToggle.classList.add('active');
+        } else {
+            filterCount.style.display = 'none';
+            filterToggle.classList.remove('active');
+        }
+    }
+
+    function toggleFilterPanel() {
+        filterPanel.classList.toggle('open');
+        filterToggle.classList.toggle('active');
     }
 
     function render() {
@@ -295,6 +320,7 @@
         clearFiltersBtn.addEventListener('click', clearAllFilters);
         viewGridBtn.addEventListener('click', function () { switchView('grid'); });
         viewTableBtn.addEventListener('click', function () { switchView('table'); });
+        filterToggle.addEventListener('click', toggleFilterPanel);
         paginationPrev.addEventListener('click', function () { if (currentPage > 1) { currentPage--; render(); } });
         paginationNext.addEventListener('click', function () {
             var tp = Math.ceil(filteredEquipment.length / perPage);
@@ -331,6 +357,7 @@
         filterBuilding.value = '';
         filterFloor.value = '';
         sortBy.value = 'newest';
+        filterPanel.classList.remove('open');
         applyFilters();
     }
 

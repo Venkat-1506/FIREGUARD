@@ -112,37 +112,11 @@
                     <img src="icons/search.svg" alt="" width="16" height="16">
                     <input type="text" id="search-input" placeholder="Search equipment...">
                 </div>
-                <select id="filter-type" class="filter-select">
-                    <option value="">All Types</option>
-                    <option value="Fire Extinguisher">Fire Extinguisher</option>
-                    <option value="Smoke Detector">Smoke Detector</option>
-                    <option value="Fire Alarm Panel">Fire Alarm Panel</option>
-                    <option value="Fire Hose Reel">Fire Hose Reel</option>
-                    <option value="Sprinkler System">Sprinkler System</option>
-                    <option value="Emergency Light">Emergency Light</option>
-                </select>
-                <select id="filter-status" class="filter-select">
-                    <option value="">All Status</option>
-                    <option value="Valid">Valid</option>
-                    <option value="Due Soon">Due Soon</option>
-                    <option value="Overdue">Overdue</option>
-                </select>
-                <select id="filter-building" class="filter-select">
-                    <option value="">All Buildings</option>
-                </select>
-                <select id="filter-floor" class="filter-select">
-                    <option value="">All Floors</option>
-                </select>
-                <div class="filter-divider"></div>
-                <select id="sort-by" class="filter-select">
-                    <option value="newest">Newest First</option>
-                    <option value="oldest">Oldest First</option>
-                    <option value="name-asc">Name A-Z</option>
-                    <option value="name-desc">Name Z-A</option>
-                    <option value="building">Building</option>
-                </select>
-                <button class="filter-clear" id="clear-filters">Clear All</button>
-                <div class="filter-divider"></div>
+                <button class="filter-toggle-btn" id="filter-toggle">
+                    <img src="icons/filter.svg" alt="" width="16" height="16">
+                    Filters
+                    <span class="filter-toggle-badge" id="filter-count" style="display:none">0</span>
+                </button>
                 <div class="view-toggle">
                     <button class="view-toggle-btn active" id="view-grid" title="Card View">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
@@ -150,6 +124,39 @@
                     <button class="view-toggle-btn" id="view-table" title="Table View">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
                     </button>
+                </div>
+            </div>
+            <div class="filter-panel" id="filter-panel">
+                <div class="filter-panel-grid">
+                    <select id="filter-type" class="filter-select">
+                        <option value="">All Types</option>
+                        <option value="Fire Extinguisher">Fire Extinguisher</option>
+                        <option value="Smoke Detector">Smoke Detector</option>
+                        <option value="Fire Alarm Panel">Fire Alarm Panel</option>
+                        <option value="Fire Hose Reel">Fire Hose Reel</option>
+                        <option value="Sprinkler System">Sprinkler System</option>
+                        <option value="Emergency Light">Emergency Light</option>
+                    </select>
+                    <select id="filter-status" class="filter-select">
+                        <option value="">All Status</option>
+                        <option value="Valid">Valid</option>
+                        <option value="Due Soon">Due Soon</option>
+                        <option value="Overdue">Overdue</option>
+                    </select>
+                    <select id="filter-building" class="filter-select">
+                        <option value="">All Buildings</option>
+                    </select>
+                    <select id="filter-floor" class="filter-select">
+                        <option value="">All Floors</option>
+                    </select>
+                    <select id="sort-by" class="filter-select">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="name-asc">Name A-Z</option>
+                        <option value="name-desc">Name Z-A</option>
+                        <option value="building">Building</option>
+                    </select>
+                    <button class="filter-clear" id="clear-filters">Clear All</button>
                 </div>
             </div>
         </div>
