@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="body-grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E0E0E0"/>
+      <stop offset="30%" style="stop-color:#F5F5F5"/>
+      <stop offset="70%" style="stop-color:#F5F5F5"/>
+      <stop offset="100%" style="stop-color:#BDBDBD"/>
+    </linearGradient>
+    <linearGradient id="light-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF176;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#FFF176;stop-opacity:0"/>
+    </linearGradient>
+    <radialGradient id="glow-effect" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" style="stop-color:#FFEB3B;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#FFEB3B;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="shadow6" x="-15%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="2" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Wall -->
+  <rect x="0" y="0" width="400" height="400" fill="#FAFAFA"/>
+  <g filter="url(#shadow6)">
+    <!-- Mount bracket -->
+    <rect x="155" y="80" width="90" height="25" rx="4" fill="#D0D0D0"/>
+    <!-- Main body -->
+    <rect x="120" y="100" width="160" height="120" rx="10" fill="url(#body-grad2)" stroke="#BDBDBD" stroke-width="2"/>
+    <!-- Top label -->
+    <rect x="140" y="105" width="120" height="30" rx="5" fill="#FFFFFF"/>
+    <text x="200" y="118" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="8" fill="#D32F2F" font-weight="bold">EMERGENCY</text>
+    <text x="200" y="129" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="8" fill="#D32F2F" font-weight="bold">EXIT</text>
+    <!-- Left lamp head -->
+    <ellipse cx="155" cy="165" rx="25" ry="20" fill="#FFFFFF" stroke="#D0D0D0" stroke-width="1.5"/>
+    <ellipse cx="155" cy="165" rx="18" ry="14" fill="#FFF9C4"/>
+    <circle cx="155" cy="165" r="5" fill="#FFEB3B"/>
+    <!-- Light rays left -->
+    <line x1="130" y1="150" x2="110" y2="130" stroke="#FFEB3B" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+    <line x1="130" y1="165" x2="100" y2="165" stroke="#FFEB3B" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+    <line x1="130" y1="180" x2="110" y2="200" stroke="#FFEB3B" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+    <!-- Right lamp head -->
+    <ellipse cx="245" cy="165" rx="25" ry="20" fill="#FFFFFF" stroke="#D0D0D0" stroke-width="1.5"/>
+    <ellipse cx="245" cy="165" rx="18" ry="14" fill="#FFF9C4"/>
+    <circle cx="245" cy="165" r="5" fill="#FFEB3B"/>
+    <!-- Light rays right -->
+    <line x1="270" y1="150" x2="290" y2="130" stroke="#FFEB3B" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+    <line x1="270" y1="165" x2="300" y2="165" stroke="#FFEB3B" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+    <line x1="270" y1="180" x2="290" y2="200" stroke="#FFEB3B" stroke-width="2" opacity="0.5" stroke-linecap="round"/>
+    <!-- Center LED indicator -->
+    <circle cx="200" cy="145" r="4" fill="#4CAF50"/>
+    <!-- Glow effect -->
+    <ellipse cx="200" cy="180" rx="80" ry="40" fill="url(#glow-effect)"/>
+    <!-- Bottom section - battery indicator -->
+    <rect x="155" y="220" width="90" height="25" rx="5" fill="#F5F5F5" stroke="#E0E0E0" stroke-width="1"/>
+    <rect x="160" y="225" width="30" height="15" rx="3" fill="#4CAF50"/>
+    <text x="200" y="237" text-anchor="middle" font-family="Arial" font-size="7" fill="#757575">BATTERY OK</text>
+    <!-- Pull cord indicator -->
+    <line x1="200" y1="245" x2="200" y2="290" stroke="#D32F2F" stroke-width="2"/>
+    <circle cx="200" cy="295" r="8" fill="#D32F2F"/>
+    <text x="200" y="298" text-anchor="middle" font-family="Arial" font-size="6" fill="#FFFFFF" font-weight="bold">TEST</text>
+  </g>
+</svg>

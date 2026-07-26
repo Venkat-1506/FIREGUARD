@@ -1,0 +1,166 @@
+/* ==========================================
+   RESPONSIVE.CSS — Breakpoints
+   ========================================== */
+
+@media (max-width: 1200px) {
+    .dash-overview {
+        grid-template-columns: 1fr;
+    }
+    .dash-ring-card {
+        flex-direction: row;
+        min-width: 0;
+    }
+    .dash-ring-legend {
+        flex-direction: row;
+        gap: 16px;
+    }
+    .dash-quick-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .dash-grid {
+        grid-template-columns: 1fr;
+    }
+    .eq-grid {
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    }
+    .topbar-search { width: 180px; }
+}
+
+@media (max-width: 768px) {
+    .dash-hero-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 24px 20px;
+    }
+    .dash-hero-title { font-size: 22px; }
+    .dash-hero-btn { width: 100%; justify-content: center; }
+
+    .topbar-nav { display: none; }
+    .topbar-search { display: none; }
+    .topbar-username { display: none; }
+    .topbar-hamburger { display: flex; }
+
+    .topbar-nav.mobile-open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: var(--topbar-h);
+        left: 0;
+        right: 0;
+        background: var(--bg-surface);
+        border-bottom: 1px solid var(--border);
+        padding: 8px;
+        gap: 2px;
+        z-index: 200;
+    }
+
+    .filter-bar-inner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .filter-divider { display: none; }
+    .filter-select { min-width: 100%; }
+    .view-toggle { align-self: flex-start; }
+
+    .page-header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .eq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lg-hero-title { font-size: 32px; }
+    .lg-hero-desc { font-size: 14px; }
+    .lg-hero-actions { flex-direction: column; }
+    .lg-hero-stats { gap: 20px; }
+    .lg-hero-stat-num { font-size: 22px; }
+    .lg-hero-stat-divider { display: none; }
+
+    .lg-features-grid,
+    .lg-types-grid { grid-template-columns: 1fr; }
+
+    .lg-cta { padding: 40px 20px; margin: 0 20px 60px; }
+
+    .modal { max-width: 100%; margin: 10px; }
+    .modal-footer { flex-direction: column; }
+    .modal-footer .btn { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 600px) {
+    .dash-overview {
+        grid-template-columns: 1fr;
+    }
+    .dash-ring-card {
+        flex-direction: column;
+    }
+    .dash-ring-legend {
+        flex-direction: row;
+        gap: 16px;
+    }
+    .dash-quick-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dash-grid { gap: 16px; }
+
+    .od-row {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .od-date { display: none; }
+
+    .dash-status-bar-legend { gap: 10px; }
+    .dash-status-bar-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+
+    .eq-card-img { height: 120px; }
+
+    .filter-bar { padding: 10px 12px; }
+    .filter-search { min-width: 100%; }
+
+    .page-header-left h1 { font-size: 18px; }
+
+    .eq-pagination {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .login-modal-left { padding: 28px 20px; }
+
+    .topbar-profile { padding: 4px; }
+
+    .notif-dropdown {
+        position: fixed;
+        top: var(--topbar-h);
+        left: 0;
+        right: 0;
+        width: auto;
+        max-height: 60vh;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .container { padding: 0 12px; }
+    .dash-hero-content { padding: 20px 16px; }
+    .dash-hero-title { font-size: 20px; }
+
+    .lg-hero-title { font-size: 26px; }
+    .lg-hero-actions .btn { width: 100%; justify-content: center; }
+    .lg-cta-title { font-size: 22px; }
+
+    .topbar-logo-text { font-size: 14px; }
+
+    .eq-card-img { height: 100px; padding: 12px; }
+
+    .form-card { padding: 20px 16px; }
+    .form-grid { grid-template-columns: 1fr; }
+}

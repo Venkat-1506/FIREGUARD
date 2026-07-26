@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Equipment — FireGuard</title>
+    <link rel="icon" href="images/logos/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/equipment.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="app-body">
+
+    <!-- Loading Overlay -->
+    <div id="page-loader" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Loading form...</div>
+    </div>
+
+    <!-- Top Bar -->
+    <header class="topbar">
+        <div class="topbar-inner">
+            <div class="topbar-left">
+                <a href="dashboard.html" class="topbar-logo">
+                    <img src="images/logos/logo.svg" alt="FireGuard" width="28" height="28">
+                    <span class="topbar-logo-text">Fire<span>Guard</span></span>
+                </a>
+                <nav class="topbar-nav" id="topbar-nav">
+                    <a href="dashboard.html" class="topbar-link">
+                        <img src="icons/dashboard.svg" alt="" width="16" height="16"> Dashboard
+                    </a>
+                    <a href="equipment.html" class="topbar-link">
+                        <img src="icons/equipment.svg" alt="" width="16" height="16"> Equipment
+                    </a>
+                    <a href="add-equipment.html" class="topbar-link active">
+                        <img src="icons/add.svg" alt="" width="16" height="16"> Add New
+                    </a>
+                </nav>
+            </div>
+            <div class="topbar-right">
+                <div class="topbar-search">
+                    <img src="icons/search.svg" alt="" width="18" height="18">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <button class="topbar-notif" id="topbar-notif-btn">
+                    <img src="icons/notification.svg" alt="Notifications" width="20" height="20">
+                    <span id="notification-badge" class="topbar-notif-badge"></span>
+                </button>
+                <div id="notif-dropdown" class="notif-dropdown">
+                    <div class="notif-dropdown-header">
+                        <h3>Notifications</h3>
+                        <button id="notif-mark-read" class="notif-mark-read">Mark all read</button>
+                    </div>
+                    <div id="notif-list" class="notif-list"></div>
+                </div>
+                <button class="topbar-hamburger" id="topbar-menu-btn">
+                    <img src="icons/menu.svg" alt="Menu" width="22" height="22">
+                </button>
+                <div class="topbar-profile" id="topbar-profile">
+                    <div class="avatar">SO</div>
+                    <span id="topbar-username">Safety Officer</span>
+                    <div id="profile-dropdown" class="profile-dropdown">
+                        <button class="dropdown-item" id="dropdown-profile">
+                            <img src="icons/profile.svg" alt="" width="16" height="16">
+                            Profile
+                        </button>
+                        <button class="dropdown-item" id="dropdown-settings">
+                            <img src="icons/settings.svg" alt="" width="16" height="16">
+                            Settings
+                        </button>
+                        <div class="dropdown-divider"></div>
+                        <button id="dropdown-logout" class="dropdown-item danger">
+                            <img src="icons/logout.svg" alt="" width="16" height="16">
+                            Sign Out
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="form-main">
+
+        <!-- Hero Banner -->
+        <div class="eq-hero">
+            <div class="eq-hero-bg"></div>
+            <div class="eq-hero-content">
+                <div class="eq-hero-left">
+                    <h1 class="eq-hero-title">Add New Equipment</h1>
+                    <p class="eq-hero-sub">Register a new piece of fire safety equipment</p>
+                </div>
+                <div class="eq-hero-right">
+                    <a href="equipment.html" class="eq-hero-btn">
+                        <img src="icons/equipment.svg" alt="" width="16" height="16">
+                        Back to Equipment
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <form id="add-equipment-form">
+
+            <!-- Step 1: Type Selection -->
+            <div class="form-card form-card-step">
+                <div class="form-card-step-badge">1</div>
+                <div class="form-card-header">
+                    <h2 class="form-card-title">Equipment Type</h2>
+                    <p class="form-card-desc">Choose the type of equipment to register</p>
+                </div>
+                <div class="form-type-card">
+                    <div class="form-type-card-inner">
+                        <div class="form-type-preview">
+                            <img id="form-preview-img" src="images/equipment/fire-extinguisher.svg" alt="Equipment Preview">
+                        </div>
+                        <div class="form-type-info">
+                            <label class="form-label" for="equip-type">Equipment Type</label>
+                            <select id="equip-type" class="form-select">
+                                <option value="">Select an equipment type</option>
+                                <option value="Fire Extinguisher">Fire Extinguisher</option>
+                                <option value="Smoke Detector">Smoke Detector</option>
+                                <option value="Fire Alarm Panel">Fire Alarm Panel</option>
+                                <option value="Fire Hose Reel">Fire Hose Reel</option>
+                                <option value="Sprinkler System">Sprinkler System</option>
+                                <option value="Emergency Light">Emergency Light</option>
+                            </select>
+                            <p id="form-preview-hint" class="form-type-hint">Select an equipment type to preview</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 & 3: Two-column layout -->
+            <div class="form-card-grid">
+
+                <!-- Step 2: Basic Information -->
+                <div class="form-card form-card-step">
+                    <div class="form-card-step-badge">2</div>
+                    <div class="form-card-header">
+                        <h2 class="form-card-title">Basic Information</h2>
+                        <p class="form-card-desc">Where is the equipment located?</p>
+                    </div>
+                    <div class="form-card-body">
+                        <div class="form-group">
+                            <label class="form-label" for="equip-id">Equipment ID</label>
+                            <input class="form-input" id="equip-id" type="text" placeholder="e.g., FE-006">
+                            <span class="form-error" id="equip-id-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="equip-building">Building</label>
+                            <select class="form-select" id="equip-building">
+                                <option value="">Select building</option>
+                            </select>
+                            <span class="form-error" id="equip-building-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="equip-floor">Floor</label>
+                            <select class="form-select" id="equip-floor">
+                                <option value="">Select floor</option>
+                            </select>
+                            <span class="form-error" id="equip-floor-error"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Inspection Details -->
+                <div class="form-card form-card-step">
+                    <div class="form-card-step-badge">3</div>
+                    <div class="form-card-header">
+                        <h2 class="form-card-title">Inspection Details</h2>
+                        <p class="form-card-desc">When was it installed and last checked?</p>
+                    </div>
+                    <div class="form-card-body">
+                        <div class="form-group">
+                            <label class="form-label" for="equip-install-date">Installation Date</label>
+                            <input class="form-input" id="equip-install-date" type="date">
+                            <span class="form-error" id="equip-install-date-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="equip-last-inspection">Last Inspection Date</label>
+                            <input class="form-input" id="equip-last-inspection" type="date">
+                            <span class="form-error" id="equip-last-inspection-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="equip-interval">Inspection Interval</label>
+                            <select class="form-select" id="equip-interval">
+                                <option value="">Select interval</option>
+                                <option value="3">Every 3 Months</option>
+                                <option value="6">Every 6 Months</option>
+                                <option value="12">Every 12 Months</option>
+                                <option value="24">Every 24 Months</option>
+                            </select>
+                            <span class="form-error" id="equip-interval-error"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Step 4: Remarks -->
+            <div class="form-card form-card-step">
+                <div class="form-card-step-badge">4</div>
+                <div class="form-card-header">
+                    <h2 class="form-card-title">Additional Notes</h2>
+                    <p class="form-card-desc">Any remarks about this equipment's condition</p>
+                </div>
+                <div class="form-card-body">
+                    <div class="form-group">
+                        <label class="form-label" for="equip-remarks">Remarks</label>
+                        <textarea class="form-textarea" id="equip-remarks" rows="3" placeholder="Any notes about this equipment's condition, maintenance history, etc."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="form-actions">
+                <a href="equipment.html" class="btn btn-ghost">Cancel</a>
+                <button type="reset" class="btn btn-ghost">Reset Form</button>
+                <button type="submit" class="btn btn-primary btn-lg">
+                    <img src="icons/add.svg" alt="" width="16" height="16"> Save Equipment
+                </button>
+            </div>
+        </form>
+            </div>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="app-footer-inner">
+            <div class="app-footer-left">
+                <a href="dashboard.html" class="app-footer-logo">
+                    <img src="images/logos/logo.svg" alt="FireGuard" width="20" height="20">
+                    <span>Fire<b>Guard</b></span>
+                </a>
+                <span class="app-footer-copy">&copy; 2026 FireGuard. All rights reserved.</span>
+            </div>
+            <div class="app-footer-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="equipment.html">Equipment</a>
+                <a href="add-equipment.html">Add New</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Profile Modal -->
+    <div id="profile-modal-overlay" class="modal-overlay">
+        <div class="modal profile-modal">
+            <div class="modal-header">
+                <h2>My Profile</h2>
+                <button id="profile-modal-close" class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="profile-modal-top">
+                    <div class="profile-modal-avatar" id="profile-modal-avatar">SO</div>
+                    <div>
+                        <h3 id="profile-modal-name">Safety Officer</h3>
+                        <p id="profile-modal-role">Fire Safety Inspector</p>
+                    </div>
+                </div>
+                <div class="profile-modal-fields">
+                    <div class="profile-field">
+                        <label>Full Name</label>
+                        <input type="text" id="profile-name-input" class="form-input">
+                    </div>
+                    <div class="profile-field">
+                        <label>Email</label>
+                        <input type="email" id="profile-email-input" class="form-input">
+                    </div>
+                    <div class="profile-field">
+                        <label>Role</label>
+                        <input type="text" id="profile-role-input" class="form-input">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="profile-cancel-btn" class="btn btn-ghost">Cancel</button>
+                <button id="profile-save-btn" class="btn btn-primary">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal-overlay" class="modal-overlay">
+        <div class="modal settings-modal">
+            <div class="modal-header">
+                <h2>Settings</h2>
+                <button id="settings-modal-close" class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="settings-group">
+                    <div class="settings-row">
+                        <div class="settings-row-info">
+                            <h4>Desktop Notifications</h4>
+                            <p>Show alerts for overdue and due-soon equipment</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="setting-notifications" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-row">
+                        <div class="settings-row-info">
+                            <h4>Compact View</h4>
+                            <p>Show more items per row on the equipment list</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="setting-compact">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-row">
+                        <div class="settings-row-info">
+                            <h4>Auto-refresh Dashboard</h4>
+                            <p>Refresh stats every 60 seconds</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="setting-autorefresh">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="settings-cancel-btn" class="btn btn-ghost">Cancel</button>
+                <button id="settings-save-btn" class="btn btn-primary">Save Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js?v=2"></script>
+    <script src="js/app.js?v=2"></script>
+    <script src="js/form.js?v=2"></script>
+    <script>
+        window.addEventListener("load", function() {
+            var loader = document.getElementById("page-loader");
+            if (loader) { loader.classList.add("hidden"); setTimeout(function(){ loader.remove(); }, 300); }
+        });
+    </script>
+</body>
+</html>

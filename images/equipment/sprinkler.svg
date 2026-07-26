@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="pipe-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9E9E9E"/>
+      <stop offset="30%" style="stop-color:#BDBDBD"/>
+      <stop offset="70%" style="stop-color:#BDBDBD"/>
+      <stop offset="100%" style="stop-color:#757575"/>
+    </linearGradient>
+    <linearGradient id="head-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F5F5F5"/>
+      <stop offset="40%" style="stop-color:#FFFFFF"/>
+      <stop offset="100%" style="stop-color:#E0E0E0"/>
+    </linearGradient>
+    <linearGradient id="water-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#42A5F5;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#1E88E5;stop-opacity:0.2"/>
+    </linearGradient>
+    <filter id="shadow5" x="-10%" y="-5%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Ceiling -->
+  <rect x="0" y="0" width="400" height="60" fill="#F0F0F0"/>
+  <rect x="0" y="58" width="400" height="3" fill="#D0D0D0"/>
+  <g filter="url(#shadow5)">
+    <!-- Pipe -->
+    <rect x="100" y="30" width="200" height="35" rx="4" fill="url(#pipe-grad)" stroke="#9E9E9E" stroke-width="1.5"/>
+    <!-- Pipe flanges -->
+    <rect x="95" y="26" width="20" height="43" rx="3" fill="#BDBDBD" stroke="#9E9E9E" stroke-width="1"/>
+    <rect x="285" y="26" width="20" height="43" rx="3" fill="#BDBDBD" stroke="#9E9E9E" stroke-width="1"/>
+    <!-- Branch pipe down -->
+    <rect x="185" y="55" width="30" height="50" rx="3" fill="url(#pipe-grad)" stroke="#9E9E9E" stroke-width="1"/>
+    <!-- Sprinkler head body -->
+    <rect x="175" y="100" width="50" height="40" rx="5" fill="url(#head-grad)" stroke="#D0D0D0" stroke-width="1.5"/>
+    <!-- Thread detail -->
+    <rect x="178" y="105" width="44" height="4" rx="1" fill="#E8E8E8"/>
+    <rect x="178" y="112" width="44" height="4" rx="1" fill="#E8E8E8"/>
+    <rect x="178" y="119" width="44" height="4" rx="1" fill="#E8E8E8"/>
+    <!-- Deflector plate -->
+    <path d="M 165 145 L 235 145" stroke="#D0D0D0" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 170 150 L 200 140 L 230 150" fill="none" stroke="#BDBDBD" stroke-width="2"/>
+    <!-- Heat bulb / fusible link -->
+    <circle cx="200" cy="148" r="6" fill="#D32F2F" stroke="#C62828" stroke-width="1.5"/>
+    <circle cx="200" cy="148" r="3" fill="#EF5350"/>
+    <!-- Water spray pattern -->
+    <path d="M 200 155 Q 170 190 140 240" fill="none" stroke="url(#water-grad)" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <path d="M 200 155 Q 185 200 170 250" fill="none" stroke="url(#water-grad)" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <path d="M 200 155 Q 200 210 200 260" fill="none" stroke="url(#water-grad)" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    <path d="M 200 155 Q 215 200 230 250" fill="none" stroke="url(#water-grad)" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <path d="M 200 155 Q 230 190 260 240" fill="none" stroke="url(#water-grad)" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <!-- Water droplets -->
+    <circle cx="150" cy="220" r="3" fill="#42A5F5" opacity="0.4"/>
+    <circle cx="175" cy="240" r="2.5" fill="#42A5F5" opacity="0.35"/>
+    <circle cx="200" cy="250" r="3" fill="#42A5F5" opacity="0.45"/>
+    <circle cx="225" cy="240" r="2.5" fill="#42A5F5" opacity="0.35"/>
+    <circle cx="250" cy="220" r="3" fill="#42A5F5" opacity="0.4"/>
+    <circle cx="160" cy="260" r="2" fill="#42A5F5" opacity="0.3"/>
+    <circle cx="240" cy="260" r="2" fill="#42A5F5" opacity="0.3"/>
+    <!-- Water mist effect -->
+    <ellipse cx="200" cy="280" rx="60" ry="15" fill="#42A5F5" opacity="0.1"/>
+    <!-- Label -->
+    <rect x="145" y="320" width="110" height="28" rx="5" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1"/>
+    <text x="200" y="339" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" fill="#424242" font-weight="bold">SPRINKLER HEAD</text>
+  </g>
+</svg>

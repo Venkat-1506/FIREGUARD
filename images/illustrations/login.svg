@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <defs>
+    <linearGradient id="login-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF5F5"/>
+      <stop offset="100%" style="stop-color:#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="400" fill="url(#login-bg)"/>
+  <!-- Person silhouette -->
+  <circle cx="250" cy="120" r="35" fill="#FFCDD2" stroke="#D32F2F" stroke-width="2"/>
+  <circle cx="250" cy="115" r="14" fill="#D32F2F" opacity="0.6"/>
+  <path d="M 220 145 Q 220 175 250 180 Q 280 175 280 145" fill="#FFCDD2" stroke="#D32F2F" stroke-width="2"/>
+  <!-- Shield -->
+  <path d="M 250 200 L 220 215 L 220 250 Q 220 280 250 295 Q 280 280 280 250 L 280 215 Z" fill="#D32F2F" stroke="#C62828" stroke-width="2" opacity="0.8"/>
+  <path d="M 250 210 L 230 220 L 230 248 Q 230 268 250 278 Q 270 268 270 248 L 270 220 Z" fill="#FFFFFF" opacity="0.9"/>
+  <!-- Checkmark in shield -->
+  <path d="M 238 245 L 248 255 L 265 235" fill="none" stroke="#D32F2F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Login form -->
+  <rect x="150" y="310" width="200" height="60" rx="10" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1.5"/>
+  <!-- Input field -->
+  <rect x="165" y="320" width="170" height="18" rx="4" fill="#F5F5F5" stroke="#E0E0E0" stroke-width="1"/>
+  <text x="175" y="333" font-family="Arial" font-size="9" fill="#BDBDBD">Email or username</text>
+  <!-- Lock icon -->
+  <rect x="235" y="345" width="30" height="20" rx="3" fill="#D32F2F" opacity="0.8"/>
+  <rect x="243" y="340" width="14" height="10" rx="3" fill="none" stroke="#D32F2F" stroke-width="2" opacity="0.8"/>
+  <circle cx="250" cy="355" r="2.5" fill="#FFFFFF"/>
+  <!-- Decorative elements -->
+  <circle cx="80" cy="100" r="6" fill="#D32F2F" opacity="0.1"/>
+  <circle cx="90" cy="130" r="4" fill="#D32F2F" opacity="0.12"/>
+  <circle cx="420" cy="350" r="8" fill="#D32F2F" opacity="0.1"/>
+  <circle cx="400" cy="320" r="5" fill="#D32F2F" opacity="0.08"/>
+  <!-- Lock key symbol -->
+  <g transform="translate(60, 280)">
+    <circle cx="15" cy="15" r="12" fill="none" stroke="#D32F2F" stroke-width="1.5" opacity="0.2"/>
+    <rect x="12" y="25" width="6" height="15" rx="1" fill="#D32F2F" opacity="0.2"/>
+  </g>
+</svg>

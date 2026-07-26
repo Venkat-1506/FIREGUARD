@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireGuard — Fire Safety Equipment Register</title>
+    <link rel="icon" href="images/logos/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="lg-header" class="lg-header">
+        <div class="lg-header-inner">
+            <a href="index.html" class="lg-logo">
+                <img src="images/logos/logo.svg" alt="FireGuard" width="32" height="32">
+                <span class="lg-logo-text">Fire<span>Guard</span></span>
+            </a>
+            <nav id="lg-nav" class="lg-nav">
+                <a href="#features" class="lg-nav-link">Features</a>
+                <a href="#equipment-types" class="lg-nav-link">Equipment</a>
+                <a href="#cta" class="lg-nav-link">Why FireGuard</a>
+            </nav>
+            <div class="lg-nav-actions">
+                <button type="button" class="lg-nav-btn lg-nav-btn-outline" data-open-login>Login</button>
+                <button type="button" class="lg-nav-btn lg-nav-btn-primary" data-open-login>Get Started</button>
+            </div>
+            <button id="lg-menu-toggle" class="lg-menu-toggle" aria-label="Toggle menu">
+                <img src="icons/menu.svg" alt="" width="24" height="24">
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="lg-hero">
+        <div class="lg-hero-content">
+            <div class="lg-hero-badge">SIH 2026 — Smart India Hackathon</div>
+            <h1 class="lg-hero-title">Fire Safety <span>Intelligence</span></h1>
+            <p class="lg-hero-desc">
+                A comprehensive fire safety equipment tracking and inspection management system.
+                Monitor, maintain, and manage all your building's fire safety assets from a single dashboard.
+            </p>
+            <div class="lg-hero-actions">
+                <button type="button" class="btn btn-primary btn-lg" data-open-login>Get Started</button>
+                <a href="#features" class="btn btn-ghost btn-lg">Learn More</a>
+            </div>
+            <div class="lg-hero-stats">
+                <div class="lg-hero-stat">
+                    <div class="lg-hero-stat-num">6+</div>
+                    <div class="lg-hero-stat-label">Buildings</div>
+                </div>
+                <div class="lg-hero-stat-divider"></div>
+                <div class="lg-hero-stat">
+                    <div class="lg-hero-stat-num">100+</div>
+                    <div class="lg-hero-stat-label">Equipment</div>
+                </div>
+                <div class="lg-hero-stat-divider"></div>
+                <div class="lg-hero-stat">
+                    <div class="lg-hero-stat-num">24/7</div>
+                    <div class="lg-hero-stat-label">Monitoring</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="lg-section">
+        <div class="lg-section-header">
+            <h2 class="lg-section-title">Why FireGuard?</h2>
+            <p class="lg-section-desc">Everything you need to keep your fire safety equipment in top condition.</p>
+        </div>
+        <div class="lg-features-grid">
+            <div class="lg-feature-card">
+                <div class="lg-feature-icon blue">
+                    <img src="icons/equipment.svg" alt="" width="24" height="24">
+                </div>
+                <h3 class="lg-feature-title">Equipment Tracking</h3>
+                <p class="lg-feature-desc">Track all fire safety equipment across every building in one unified register with real-time status.</p>
+            </div>
+            <div class="lg-feature-card">
+                <div class="lg-feature-icon green">
+                    <img src="icons/calendar.svg" alt="" width="24" height="24">
+                </div>
+                <h3 class="lg-feature-title">Inspection Management</h3>
+                <p class="lg-feature-desc">Schedule and manage inspections with automated reminders and digital checklists.</p>
+            </div>
+            <div class="lg-feature-card">
+                <div class="lg-feature-icon orange">
+                    <img src="icons/warning.svg" alt="" width="24" height="24">
+                </div>
+                <h3 class="lg-feature-title">Expiry Alerts</h3>
+                <p class="lg-feature-desc">Never miss an inspection deadline with intelligent alert notifications and status tracking.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Types -->
+    <section id="equipment-types" class="lg-section" style="background: var(--bg-surface);">
+        <div class="lg-section-header">
+            <h2 class="lg-section-title">Equipment We Track</h2>
+            <p class="lg-section-desc">Comprehensive coverage for every type of fire safety equipment.</p>
+        </div>
+        <div class="lg-types-grid">
+            <div class="lg-type-card">
+                <div class="lg-type-img">
+                    <img src="images/equipment/fire-extinguisher.svg" alt="Fire Extinguisher">
+                </div>
+                <h3 class="lg-type-name">Fire Extinguisher</h3>
+                <p class="lg-type-desc">Portable and wall-mounted extinguishers for all fire classes.</p>
+            </div>
+            <div class="lg-type-card">
+                <div class="lg-type-img">
+                    <img src="images/equipment/smoke-detector.svg" alt="Smoke Detector">
+                </div>
+                <h3 class="lg-type-name">Smoke Detector</h3>
+                <p class="lg-type-desc">Photoelectric and ionization smoke detection units.</p>
+            </div>
+            <div class="lg-type-card">
+                <div class="lg-type-img">
+                    <img src="images/equipment/fire-alarm-panel.svg" alt="Fire Alarm Panel">
+                </div>
+                <h3 class="lg-type-name">Fire Alarm Panel</h3>
+                <p class="lg-type-desc">Central alarm control panels and notification systems.</p>
+            </div>
+            <div class="lg-type-card">
+                <div class="lg-type-img">
+                    <img src="images/equipment/hose-reel.svg" alt="Fire Hose Reel">
+                </div>
+                <h3 class="lg-type-name">Fire Hose Reel</h3>
+                <p class="lg-type-desc">Indoor and outdoor hose reels with complete assemblies.</p>
+            </div>
+            <div class="lg-type-card">
+                <div class="lg-type-img">
+                    <img src="images/equipment/sprinkler.svg" alt="Sprinkler System">
+                </div>
+                <h3 class="lg-type-name">Sprinkler System</h3>
+                <p class="lg-type-desc">Wet and dry sprinkler systems for automatic suppression.</p>
+            </div>
+            <div class="lg-type-card">
+                <div class="lg-type-img">
+                    <img src="images/equipment/emergency-light.svg" alt="Emergency Light">
+                </div>
+                <h3 class="lg-type-name">Emergency Light</h3>
+                <p class="lg-type-desc">Backup lighting for safe evacuation during power outages.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="lg-section">
+        <div class="lg-cta">
+            <h2 class="lg-cta-title">Ready to Get Started?</h2>
+            <p class="lg-cta-desc">Join FireGuard today and take full control of your building's fire safety equipment.</p>
+            <button type="button" class="lg-cta-btn" data-open-login>Get Started Now</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="lg-footer">
+        <div class="lg-footer-logo">
+            <img src="images/logos/logo.svg" alt="FireGuard" width="24" height="24">
+            <span>Fire<b>Guard</b></span>
+        </div>
+        <div class="lg-footer-links">
+            <a href="#features">Features</a>
+            <a href="#equipment-types">Equipment</a>
+            <a href="#cta">Why FireGuard</a>
+        </div>
+        <p class="lg-footer-copy">&copy; 2026 FireGuard. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="login-modal-overlay">
+        <div class="login-modal">
+            <!-- Left: Form -->
+            <div class="login-modal-left">
+                <div class="login-modal-left-inner">
+                    <a href="index.html" class="login-logo">
+                        <img src="images/logos/logo.svg" alt="FireGuard Logo" width="36" height="36">
+                        <span class="login-logo-text">Fire<span>Guard</span></span>
+                    </a>
+                    <h2 class="login-title">Welcome Back</h2>
+                    <p class="login-subtitle">Sign in to your account</p>
+
+                    <div id="login-error-msg" class="login-error" style="display: none;">
+                        <img src="icons/warning.svg" alt="Warning" width="16" height="16">
+                        <span id="login-error-text"></span>
+                    </div>
+
+                    <form id="login-form" class="login-form">
+                        <div class="login-field">
+                            <label for="username">Username</label>
+                            <div class="login-input-wrap">
+                                <img src="icons/profile.svg" alt="" class="login-input-icon" width="18" height="18">
+                                <input id="username" type="text" placeholder="Enter username" autocomplete="username" required>
+                            </div>
+                            <span id="username-error" class="login-field-error"></span>
+                        </div>
+
+                        <div class="login-field">
+                            <label for="password">Password</label>
+                            <div class="login-input-wrap">
+                                <img src="icons/profile.svg" alt="" class="login-input-icon" width="18" height="18">
+                                <input id="password" type="password" placeholder="Enter password" autocomplete="current-password" required>
+                                <button type="button" id="password-toggle" class="login-pw-toggle" tabindex="-1">
+                                    <img src="icons/view.svg" alt="Toggle password visibility" width="18" height="18">
+                                </button>
+                            </div>
+                            <span id="password-error" class="login-field-error"></span>
+                        </div>
+
+                        <div class="login-options">
+                            <label class="login-remember">
+                                <input type="checkbox" id="remember-me" hidden>
+                                <span class="login-checkbox"></span>
+                                <span>Remember me</span>
+                            </label>
+                            <a href="#" class="login-forgot">Forgot password?</a>
+                        </div>
+
+                        <button type="submit" id="login-btn" class="login-submit">
+                            <span class="login-btn-text">Sign In</span>
+                            <span class="login-btn-loader"></span>
+                        </button>
+
+                        <p class="login-demo">Demo: <strong>admin</strong> / <strong>admin123</strong></p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Right: Branding -->
+            <div class="login-modal-right">
+                <div class="login-modal-right-content">
+                    <img src="images/logos/logo.svg" alt="FireGuard" width="48" height="48" class="login-modal-right-logo">
+                    <h3>Fire Safety<br>Intelligence</h3>
+                    <p>Track, manage, and inspect all your fire safety equipment from one powerful dashboard.</p>
+                    <div class="login-modal-right-stats">
+                        <div><strong>100+</strong><span>Equipment</span></div>
+                        <div><strong>6+</strong><span>Buildings</span></div>
+                        <div><strong>24/7</strong><span>Monitoring</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Close button -->
+            <button type="button" id="login-modal-close" class="login-modal-close" aria-label="Close login">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/landing.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

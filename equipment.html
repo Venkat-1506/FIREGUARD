@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipment — FireGuard</title>
+    <link rel="icon" href="images/logos/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/equipment.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="app-body">
+
+    <!-- Loading Overlay -->
+    <div id="page-loader" class="loading-overlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Loading equipment...</div>
+    </div>
+
+    <!-- Top Bar -->
+    <header class="topbar">
+        <div class="topbar-inner">
+            <div class="topbar-left">
+                <a href="dashboard.html" class="topbar-logo">
+                    <img src="images/logos/logo.svg" alt="FireGuard" width="28" height="28">
+                    <span class="topbar-logo-text">Fire<span>Guard</span></span>
+                </a>
+                <nav class="topbar-nav" id="topbar-nav">
+                    <a href="dashboard.html" class="topbar-link">
+                        <img src="icons/dashboard.svg" alt="" width="18" height="18">
+                        Dashboard
+                    </a>
+                    <a href="equipment.html" class="topbar-link active">
+                        <img src="icons/equipment.svg" alt="" width="18" height="18">
+                        Equipment
+                    </a>
+                    <a href="add-equipment.html" class="topbar-link">
+                        <img src="icons/add.svg" alt="" width="18" height="18">
+                        Add New
+                    </a>
+                </nav>
+            </div>
+            <div class="topbar-right">
+                <div class="topbar-search">
+                    <img src="icons/search.svg" alt="" width="18" height="18">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <button class="topbar-notif" id="topbar-notif-btn">
+                    <img src="icons/notification.svg" alt="Notifications" width="20" height="20">
+                    <span id="notification-badge" class="topbar-notif-badge"></span>
+                </button>
+                <div id="notif-dropdown" class="notif-dropdown">
+                    <div class="notif-dropdown-header">
+                        <h3>Notifications</h3>
+                        <button id="notif-mark-read" class="notif-mark-read">Mark all read</button>
+                    </div>
+                    <div id="notif-list" class="notif-list"></div>
+                </div>
+                <button class="topbar-hamburger" id="topbar-menu-btn">
+                    <img src="icons/menu.svg" alt="Menu" width="22" height="22">
+                </button>
+                <div class="topbar-profile" id="topbar-profile">
+                    <div class="avatar">SO</div>
+                    <span id="topbar-username" class="topbar-username">Safety Officer</span>
+                    <div id="profile-dropdown" class="profile-dropdown">
+                        <button class="dropdown-item" id="dropdown-profile">
+                            <img src="icons/profile.svg" alt="" width="16" height="16">
+                            Profile
+                        </button>
+                        <button class="dropdown-item" id="dropdown-settings">
+                            <img src="icons/settings.svg" alt="" width="16" height="16">
+                            Settings
+                        </button>
+                        <div class="dropdown-divider"></div>
+                        <button id="dropdown-logout" class="dropdown-item danger">
+                            <img src="icons/logout.svg" alt="" width="16" height="16">
+                            Sign Out
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Page Header -->
+        <div class="eq-hero">
+            <div class="eq-hero-bg"></div>
+            <div class="eq-hero-content">
+                <div class="eq-hero-left">
+                    <h1 class="eq-hero-title">All Equipment</h1>
+                    <p class="eq-hero-sub"><span id="equipment-count">40 items registered</span></p>
+                </div>
+                <div class="eq-hero-right">
+                    <a href="add-equipment.html" class="eq-hero-btn">
+                        <img src="icons/add.svg" alt="" width="16" height="16">
+                        Add Equipment
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar" id="eq-filter-bar">
+            <div class="filter-bar-inner">
+                <div class="filter-search">
+                    <img src="icons/search.svg" alt="" width="16" height="16">
+                    <input type="text" id="search-input" placeholder="Search equipment...">
+                </div>
+                <select id="filter-type" class="filter-select">
+                    <option value="">All Types</option>
+                    <option value="Fire Extinguisher">Fire Extinguisher</option>
+                    <option value="Smoke Detector">Smoke Detector</option>
+                    <option value="Fire Alarm Panel">Fire Alarm Panel</option>
+                    <option value="Fire Hose Reel">Fire Hose Reel</option>
+                    <option value="Sprinkler System">Sprinkler System</option>
+                    <option value="Emergency Light">Emergency Light</option>
+                </select>
+                <select id="filter-status" class="filter-select">
+                    <option value="">All Status</option>
+                    <option value="Valid">Valid</option>
+                    <option value="Due Soon">Due Soon</option>
+                    <option value="Overdue">Overdue</option>
+                </select>
+                <select id="filter-building" class="filter-select">
+                    <option value="">All Buildings</option>
+                </select>
+                <select id="filter-floor" class="filter-select">
+                    <option value="">All Floors</option>
+                </select>
+                <div class="filter-divider"></div>
+                <select id="sort-by" class="filter-select">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="name-asc">Name A-Z</option>
+                    <option value="name-desc">Name Z-A</option>
+                    <option value="building">Building</option>
+                </select>
+                <button class="filter-clear" id="clear-filters">Clear All</button>
+                <div class="filter-divider"></div>
+                <div class="view-toggle">
+                    <button class="view-toggle-btn active" id="view-grid" title="Card View">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                    </button>
+                    <button class="view-toggle-btn" id="view-table" title="Table View">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid View -->
+        <div class="eq-grid" id="eq-grid"></div>
+
+        <!-- Table View -->
+        <div class="eq-table-wrap" id="eq-table-wrap">
+            <table class="eq-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Type</th>
+                        <th>Building</th>
+                        <th>Floor</th>
+                        <th>Last Inspection</th>
+                        <th>Next Due</th>
+                        <th>Status</th>
+                        <th>Remarks</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="equipment-table-body"></tbody>
+            </table>
+        </div>
+
+        <!-- Empty State -->
+        <div class="eq-empty" id="equipment-empty">
+            <img src="images/illustrations/empty-state.svg" alt="" width="180">
+            <h3>No Equipment Found</h3>
+            <p>Try adjusting your filters or add new equipment</p>
+            <a href="add-equipment.html" class="btn btn-primary">Add Equipment</a>
+        </div>
+
+        <!-- Pagination -->
+        <div class="eq-pagination" id="equipment-pagination">
+            <span class="eq-page-info" id="pagination-info">Showing 1-9 of 20</span>
+            <div class="eq-page-controls">
+                <button class="eq-page-btn" id="pagination-prev" disabled>Prev</button>
+                <div class="eq-page-nums" id="pagination-numbers"></div>
+                <button class="eq-page-btn" id="pagination-next">Next</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="app-footer-inner">
+            <div class="app-footer-left">
+                <a href="dashboard.html" class="app-footer-logo">
+                    <img src="images/logos/logo.svg" alt="FireGuard" width="20" height="20">
+                    <span>Fire<b>Guard</b></span>
+                </a>
+                <span class="app-footer-copy">&copy; 2026 FireGuard. All rights reserved.</span>
+            </div>
+            <div class="app-footer-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="equipment.html">Equipment</a>
+                <a href="add-equipment.html">Add New</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- View Modal -->
+    <div id="view-modal-overlay" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Equipment Details</h2>
+                <button id="view-modal-close" class="modal-close">&times;</button>
+            </div>
+            <div id="view-modal-body" class="modal-body"></div>
+            <div class="modal-footer">
+                <button id="view-modal-close-btn" class="btn btn-ghost">Close</button>
+                <a id="view-modal-edit-btn" class="btn btn-primary">Edit</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Modal -->
+    <div id="delete-modal-overlay" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Delete Equipment</h2>
+                <button id="delete-modal-close" class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body delete-modal-body">
+                <img src="icons/overdue.svg" alt="" class="delete-warning-icon" width="48" height="48">
+                <p>Are you sure?</p>
+                <p id="delete-modal-equipment-name" class="delete-equip-name"></p>
+            </div>
+            <div class="modal-footer">
+                <button id="delete-cancel-btn" class="btn btn-ghost">Cancel</button>
+                <button id="delete-confirm-btn" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div id="profile-modal-overlay" class="modal-overlay">
+        <div class="modal profile-modal">
+            <div class="modal-header">
+                <h2>My Profile</h2>
+                <button id="profile-modal-close" class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="profile-modal-top">
+                    <div class="profile-modal-avatar" id="profile-modal-avatar">SO</div>
+                    <div>
+                        <h3 id="profile-modal-name">Safety Officer</h3>
+                        <p id="profile-modal-role">Fire Safety Inspector</p>
+                    </div>
+                </div>
+                <div class="profile-modal-fields">
+                    <div class="profile-field">
+                        <label>Full Name</label>
+                        <input type="text" id="profile-name-input" class="form-input">
+                    </div>
+                    <div class="profile-field">
+                        <label>Email</label>
+                        <input type="email" id="profile-email-input" class="form-input">
+                    </div>
+                    <div class="profile-field">
+                        <label>Role</label>
+                        <input type="text" id="profile-role-input" class="form-input">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="profile-cancel-btn" class="btn btn-ghost">Cancel</button>
+                <button id="profile-save-btn" class="btn btn-primary">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal-overlay" class="modal-overlay">
+        <div class="modal settings-modal">
+            <div class="modal-header">
+                <h2>Settings</h2>
+                <button id="settings-modal-close" class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="settings-group">
+                    <div class="settings-row">
+                        <div class="settings-row-info">
+                            <h4>Desktop Notifications</h4>
+                            <p>Show alerts for overdue and due-soon equipment</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="setting-notifications" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-row">
+                        <div class="settings-row-info">
+                            <h4>Compact View</h4>
+                            <p>Show more items per row on the equipment list</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="setting-compact">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-row">
+                        <div class="settings-row-info">
+                            <h4>Auto-refresh Dashboard</h4>
+                            <p>Refresh stats every 60 seconds</p>
+                        </div>
+                        <label class="toggle">
+                            <input type="checkbox" id="setting-autorefresh">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="settings-cancel-btn" class="btn btn-ghost">Cancel</button>
+                <button id="settings-save-btn" class="btn btn-primary">Save Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/data.js?v=2"></script>
+    <script src="js/app.js?v=2"></script>
+    <script src="js/equipment.js?v=2"></script>
+    <script>
+        window.addEventListener("load", function() {
+            var loader = document.getElementById("page-loader");
+            if (loader) { loader.classList.add("hidden"); setTimeout(function(){ loader.remove(); }, 300); }
+        });
+    </script>
+
+</body>
+</html>
