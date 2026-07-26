@@ -48,7 +48,7 @@ Login credentials: `admin` / `admin123`
 3. You will see the dashboard with 40 pre-loaded equipment records
 
 ### Option B — Local (static frontend only)
-1. Clone the repo: `git clone https://github.com/Venkat-1506/fireguard.git`
+1. Clone the repo: `git clone https://github.com/Venkat-1506/FIREGUARD.git`
 2. Open the `assets/` folder
 3. Start a local server: `python -m http.server 8080`
 4. Open `http://localhost:8080` in your browser
