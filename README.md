@@ -36,7 +36,7 @@ Login credentials: `admin` / `admin123`
 
 ## Demo Video
 
-https://github.com/Venkat-1506/fireguard/assets/demo.mp4
+> Demo video is hosted externally. [Watch the demo here](YOUR_VIDEO_LINK_HERE)
 
 ---
 
