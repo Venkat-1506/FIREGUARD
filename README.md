@@ -15,31 +15,6 @@ Fire extinguishers and safety equipment in institutional buildings carry paper t
 
 Login credentials: `admin` / `admin123`
 
----
-
-## Screenshots
-
-### Landing Page
-![Landing Page](screenshots/landing.png)
-
-### Login
-![Login](screenshots/login.png)
-
-### Dashboard
-![Dashboard](screenshots/Dashboard.png)
-
-### Equipment List
-![All Equipment](screenshots/All%20equipment.png)
-
-### Add Equipment
-![Add Equipment](screenshots/add%20equipment.png)
-
-## Demo Video
-
-> Demo video is hosted externally. [Watch the demo here](YOUR_VIDEO_LINK_HERE)
-
----
-
 ## How to Run (Step by Step)
 
 ### Option A — Live (no setup needed)
@@ -196,6 +171,27 @@ assets/
     ├── requirements.txt
     └── ...
 ```
+
+## Screenshots
+
+### Landing Page
+![Landing Page](screenshots/landing.png)
+
+### Login
+![Login](screenshots/login.png)
+
+### Dashboard
+![Dashboard](screenshots/Dashboard.png)
+
+### Equipment List
+![All Equipment](screenshots/All%20equipment.png)
+
+### Add Equipment
+![Add Equipment](screenshots/add%20equipment.png)
+
+## Demo Video
+
+> Demo video is hosted externally. [Watch the demo here](YOUR_VIDEO_LINK_HERE)
 
 ## Tech Stack
 
