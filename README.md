@@ -15,6 +15,31 @@ Fire extinguishers and safety equipment in institutional buildings carry paper t
 
 Login credentials: `admin` / `admin123`
 
+---
+
+## Screenshots
+
+### Landing Page
+![Landing Page](screenshots/landing.png)
+
+### Login
+![Login](screenshots/login.png)
+
+### Dashboard
+![Dashboard](screenshots/Dashboard.png)
+
+### Equipment List
+![All Equipment](screenshots/All%20equipment.png)
+
+### Add Equipment
+![Add Equipment](screenshots/add%20equipment.png)
+
+## Demo Video
+
+https://github.com/Venkat-1506/fireguard/assets/demo.mp4
+
+---
+
 ## How to Run (Step by Step)
 
 ### Option A — Live (no setup needed)
