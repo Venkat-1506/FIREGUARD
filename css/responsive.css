@@ -67,6 +67,10 @@
         min-width: 0;
         flex: 1;
     }
+    .filter-search input {
+        height: 36px;
+        font-size: 14px;
+    }
     .filter-toggle-btn {
         display: flex;
     }
